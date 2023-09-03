@@ -5,7 +5,7 @@ import { Providers } from '@/redux/providers'
 
 export const metadata: Metadata = {
   title: 'Twitter/X clone',
-  description: 'Project to lear Next.js 13',
+  description: 'Project to learn Next.js 13',
   icons: {
     icon: './favicon.ico'
   }
