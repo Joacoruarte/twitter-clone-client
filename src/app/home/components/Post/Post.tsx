@@ -1,7 +1,7 @@
 import { type CustomPost } from '@/models'
 import s from './Post.module.scss'
 import Image from 'next/image'
-import { formatTwitterTime } from '@/utils/formatTwitterTime'
+import { formatTwitterTime } from '@/utils'
 import { FaRegComment, FaRetweet, FaRegHeart } from 'react-icons/fa'
 import Link from 'next/link'
 
@@ -46,11 +46,11 @@ export default function Post ({
           </div>
           <div className={`${s.container_action} ${s.retweet}`}>
             <FaRetweet />
-            <span>{comments}</span>
+            <span>{retweets}</span>
           </div>
           <div className={`${s.container_action} ${s.heart}`}>
             <FaRegHeart />
-            <span>{comments}</span>
+            <span>{likes}</span>
           </div>
         </div>
       </div>

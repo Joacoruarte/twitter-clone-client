@@ -4,12 +4,12 @@ import Spinner from '@/components/Loaders/Spinner/Spinner'
 import { type Post as PostType } from '@/models'
 import { useAppSelector } from '@/redux/hooks'
 import { useLazyGetMorePostsQuery } from '@/redux/services/postsApi'
-import { toCapitalizeCase } from '@/utils/toCapitalizeCase'
+import { toCapitalizeCase } from '@/utils'
 import { Fragment, useEffect, useState } from 'react'
 import { Waypoint } from 'react-waypoint'
-import Post from '../Post/Post'
 import s from './Posts.module.scss'
 import { SwitchSectionEnum, type SwitchSection } from '../Home/Home'
+import { Post } from '..'
 
 export default function Posts ({
   switchSection

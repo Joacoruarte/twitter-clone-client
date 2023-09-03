@@ -1,13 +1,13 @@
-import React from 'react';
-import s from './index.module.scss';
+import React from 'react'
+import s from './index.module.scss'
 
 interface Props {
-  icon?: JSX.Element;
-  provider: string;
-  text: string;
+  icon?: JSX.Element
+  provider: string
+  text: string
 }
 
-export default function ConnectWithProvider({ icon, provider, text }: Props) {
+export default function ConnectWithProvider ({ icon, provider, text }: Props) {
   return (
     <button className={s.connect}>
       <span className={s.connect__icon}>{icon}</span>
@@ -15,5 +15,5 @@ export default function ConnectWithProvider({ icon, provider, text }: Props) {
         {text} con <span className={s.connect__provider}>{provider}</span>
       </p>
     </button>
-  );
+  )
 }

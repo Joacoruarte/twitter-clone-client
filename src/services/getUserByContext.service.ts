@@ -1,11 +1,17 @@
 import { type User } from '@/models'
+import { getCookie } from '@/utils'
 import { cookies } from 'next/headers'
 
 const URL = 'http://localhost:3001/users/context'
 
 export const getUserByContext = async (): Promise<User> => {
   try {
-    const token = cookies().get('set-cookie')?.value
+    const isWindowExist = typeof window !== 'undefined'
+
+    const token = !isWindowExist
+      ? cookies().get('set-cookie')?.value
+      : getCookie('set-cookie')
+
     if (token === undefined || token === null) throw new Error('No token')
     const config = {
       method: 'GET',

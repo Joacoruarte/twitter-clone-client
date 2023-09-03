@@ -1,7 +1,7 @@
-import React from 'react';
-import s from './index.module.scss';
+import React from 'react'
+import s from './index.module.scss'
 
-export default function Footer() {
+export default function Footer () {
   return (
     <ul className={s.footer}>
       <li className={s.footer__item}>
@@ -95,5 +95,5 @@ export default function Footer() {
         </a>
       </li>
     </ul>
-  );
+  )
 }

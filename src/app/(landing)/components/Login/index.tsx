@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { Twitter } from '../../../../public/icons'
+import { Twitter } from '../../../../../public/icons'
 import s from './index.module.scss'
 import ActionButton from '@/components/Buttons/ActionButton'
 import IdentifyUser from './components/IdentifyUser'

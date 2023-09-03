@@ -7,15 +7,15 @@ import { store } from '@/redux/store'
 import { useRef } from 'react'
 
 interface Props {
-  user: User
-  posts: Post[]
+  user?: User
+  posts?: Post[]
 }
 
 export default function Preloader ({ user, posts }: Props) {
   const loaded = useRef(false)
   if (!loaded.current) {
-    store.dispatch(setUser(user))
-    store.dispatch(setPosts(posts))
+    (user != null) && store.dispatch(setUser(user));
+    (posts != null) && store.dispatch(setPosts(posts))
     loaded.current = true
   }
   return null

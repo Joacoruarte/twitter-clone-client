@@ -1,10 +1,9 @@
 'use client'
 import CreatePost from '@/components/CreatePost/CreatePost'
 import { useState } from 'react'
-import Posts from '../Posts/Posts'
-import HeaderHome from './HeaderHome/HeaderHome'
 import { useLazyGetPostsForUserFollowingQuery, useLazyGetPostsForUserQuery } from '@/redux/services/postsApi'
 import { useAppSelector } from '@/redux/hooks'
+import { HeaderHome, Posts } from '..'
 
 export enum SwitchSectionEnum {
   FOR_YOU = 'FOR_YOU',

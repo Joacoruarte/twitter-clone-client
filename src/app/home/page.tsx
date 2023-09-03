@@ -1,16 +1,13 @@
-import { type Post, type User } from '@/models'
-import HomeClient from './components/Home/Home'
-import { getUserByContext } from './services/getUserByContext.service'
-import Preloader from './components/Preloader'
-import getPosts from './services/getPosts.service'
+import { type Post } from '@/models'
+import { Home as HomeClient, Preloader } from './components'
+import { getPosts } from '@/services'
 
 export default async function HomePage () {
-  const currentUser: User = await getUserByContext()
   const posts: Post[] = await getPosts({ limit: 10 })
 
   return (
     <>
-      <Preloader user={currentUser} posts={posts} />
+      <Preloader posts={posts} />
       <HomeClient />
     </>
   )

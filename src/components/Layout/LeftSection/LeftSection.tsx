@@ -9,7 +9,7 @@ import { FaRegBookmark, FaUser } from 'react-icons/fa'
 import { TfiMoreAlt } from 'react-icons/tfi'
 import { useAppSelector } from '@/redux/hooks'
 import Image from 'next/image'
-import { toCapitalizeCase } from '@/utils/toCapitalizeCase'
+import { toCapitalizeCase } from '@/utils'
 import ActionButton from '@/components/Buttons/ActionButton'
 import { useState } from 'react'
 
