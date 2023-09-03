@@ -14,8 +14,12 @@ interface Props {
 export default function Preloader ({ user, posts }: Props) {
   const loaded = useRef(false)
   if (!loaded.current) {
-    (user != null) && store.dispatch(setUser(user));
-    (posts != null) && store.dispatch(setPosts(posts))
+    if (user !== null && user !== undefined) {
+      store.dispatch(setUser(user))
+    }
+    if (posts !== null && posts !== undefined) {
+      store.dispatch(setPosts(posts))
+    }
     loaded.current = true
   }
   return null
