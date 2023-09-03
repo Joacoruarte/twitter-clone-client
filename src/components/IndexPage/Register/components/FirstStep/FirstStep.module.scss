@@ -1,0 +1,53 @@
+@import '../../../../../styles/variables.scss';
+
+.container_first_step {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+
+    .first_step_title {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+    }
+
+    .first_step_inputs {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        .first_step_inputs_flex_row {
+            display: flex;
+            gap: 1rem;
+        }
+    }
+
+    .first_step_birthday_container {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+
+        h5 {
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        p {
+            color: $color-secondary;
+            font-size: .9rem;
+            line-height: 16px;
+        }
+
+        .first_step_birthday_inputs {
+            display: flex;
+            gap: .5rem;
+            margin-top: 1rem;
+            align-items: center;
+        }
+
+    }
+    .container_next_step {
+        margin-top: 3rem;
+    }
+}

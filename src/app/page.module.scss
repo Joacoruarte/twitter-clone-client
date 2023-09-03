@@ -1,0 +1,143 @@
+@import '../styles/variables.scss';
+
+.home {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    .container_main_info {
+        display: flex;
+        width: 100%;
+
+        .twitter {
+            width: 55%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: -1.5rem;
+    
+            .twitter__logo {
+                width: 380px;
+                height: 380px;
+                margin: 0 auto;
+                fill: $color-primary;
+
+                @media (max-width: 1125px) {
+                    width: 300px;
+                    height: 300px;
+                }
+            }
+
+            @media (max-width: 1125px) {
+                width: 40%;
+            }
+
+            @media (max-width: 853px) {
+                display: none;
+            }
+        }
+    
+        .presentation {
+            display: flex;
+            gap: 1rem;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+            padding-left: 2rem;
+            min-width: 437px;
+            max-width: 760px;
+
+            .twitter__logo__mobile {
+                display: none;
+            }
+    
+            .presentation__title {
+                font-size: 4.5rem;
+                max-width: 500px;
+                font-weight: 700;
+                letter-spacing: -1.2px;
+                line-height: 70px;
+                margin-bottom: 1rem;
+                color: $color-primary;
+            }
+    
+            .presentation__subtitle {
+                font-size: 2rem;
+                font-weight: 700;
+                color: $color-primary;
+            }
+    
+            .presentation__providerRegisterOptions {
+                display: flex;
+                flex-direction: column;
+                width: 310px;
+                margin-top: 1rem;
+                gap: .7rem;
+                    
+                .presentation__providerRegisterOptions__termsOfService {
+                    font-size: 11px;
+                    color: rgb(113, 118, 123);
+                    text-align: left;
+                    margin-top: -.3rem;
+                    line-height: 12px;
+    
+                    a {
+                        color: $color-twitter;
+    
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+    
+                .presentation__providerRegisterOptions__areYouHaveAccount {
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 5rem;
+                    gap: 1rem;
+    
+                    p {
+                        font-weight: 700;
+                        font-size: 1rem;
+                    }
+                }
+            }
+
+            @media (max-width: 853px) {
+                margin:  0 auto 6rem auto;
+
+                .twitter__logo__mobile {
+                    display: block;
+                    width: 50px;
+                    height: 50px;
+                    fill: $color-primary;
+                }
+            }
+
+            @media (max-width: 600px) {
+                min-width: 100%;
+                max-width: max-content;
+                width: 100%;
+                margin: 0rem auto 2rem auto;
+                padding: 0 1rem;
+
+                .presentation__title {
+                    font-size: 3rem;
+                    max-width: 340px;
+                }
+
+                .presentation__subtitle {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 600px) {
+        height: max-content;
+        padding: 2rem 0rem;
+    }
+}

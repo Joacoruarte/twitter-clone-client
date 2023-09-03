@@ -1,0 +1,46 @@
+@import '../../styles/_variables.scss';
+
+.main_layout {
+    display: flex;
+    max-width: 1260px;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    min-height: 100vh;
+    height: 100%;
+    max-height: max-content;
+}
+
+.left_section {
+    width: 275px;
+    height: 100vh;
+    position: sticky;
+    top: 0rem;
+
+    @media (max-width: 1000px) {
+        width: max-content;
+    }
+}
+
+.center_section {
+    max-width: 600px;
+    width: 100%;
+    border-left: 1px solid $color-border;
+    border-right: 1px solid $color-border;
+
+    @media (max-width: 1000px) {
+        max-width: 100%;
+    }
+}
+
+.right_section {
+    width: 350px;
+    position: sticky;
+    top: 0rem;
+    height: 100vh;
+
+    @media (max-width: 1000px) {
+        display: none;
+    }
+}
+

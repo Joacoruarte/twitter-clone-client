@@ -1,0 +1,26 @@
+.container_second_step {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+
+    .second_step_title {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+    }
+
+    .container_second_step_inputs {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .container_register_user {
+        position: absolute;
+        bottom: 3rem;
+        width: 85%;
+        left: 50%;
+        transform: translateX(-50%);
+    } 
+}

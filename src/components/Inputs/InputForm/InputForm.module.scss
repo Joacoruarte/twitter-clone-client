@@ -1,0 +1,49 @@
+@import '../../../styles/variables';
+
+.login__form__input__container {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    position: relative;
+    width: 100%;
+    padding: 0 0;
+    height: max-content;
+
+    
+    .login__form__input {
+        padding: 1rem 1rem;
+        border-radius: 5px;
+        outline: 1px solid rgb(83, 100, 113);
+        background-color: transparent;
+        width: 100%;
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 400;
+        transition: border-color .2s ease-in-out;
+
+        &:focus {
+            outline: 2px solid $color-twitter;
+        }
+
+        &:focus ~ .login__form__label, &:valid ~ .login__form__label{
+            top: 3px;
+            transform: translateY(0%);
+            font-size: 11px;
+            color: $color-twitter;
+        }
+
+        &:valid  {
+            outline: 2px solid $color-twitter;
+        }
+    }
+
+    .login__form__label {
+        position: absolute;
+        top: 50%;
+        left: 15px;
+        font-size: 14px;
+        color: rgb(83, 100, 113);
+        transform: translateY(-50%);
+        transition: all .2s ease-in-out;
+    }
+}

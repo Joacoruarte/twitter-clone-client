@@ -1,0 +1,19 @@
+@import '../../../styles/variables.scss';
+
+.orOption {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    & > div {
+        flex: 1;
+        height: .5px;
+        background-color: rgb(47, 51, 54);
+    }
+
+    & > span {
+        font-size: 1rem;
+        color: $color-primary;
+        margin: -2px 1rem 0 1rem;
+    }
+}

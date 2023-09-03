@@ -1,0 +1,36 @@
+@import '../../../styles/variables.scss';
+
+.connect {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    color: #000;
+    border-radius: 20px;
+    width: 100%;
+    background-color: $color-primary;
+    padding: .2rem 1rem;
+    transition: background-color .2s ease-in-out;
+
+    .connect__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+    }
+
+    .connect__text {
+        font-size: .9rem;
+        font-weight: 400;
+        width: 170px;
+        text-align: left;
+
+        .connect__provider {
+            text-transform: capitalize;
+        }
+    }
+
+    &:hover {
+        background-color: $color-primary-hover;
+    }
+}

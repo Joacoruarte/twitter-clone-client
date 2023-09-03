@@ -1,0 +1,95 @@
+@import '../../styles/variables';
+
+.container_create_post {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    border-bottom: 1px solid $color-border;
+    padding: 1rem 1rem;
+
+    .subcontainer_create_post {
+        display: flex;
+        width: 100%;
+        gap: 1rem;
+
+        .container_of_avatar {
+            height: 100%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            padding-top: 1rem;
+
+            .container_avatar {
+                min-width: 2.3rem;
+                min-height: 2.3rem;
+                max-width: 2.3rem;
+                max-height: 2.3rem;
+                margin-top: -10px;
+                border-radius: 50%;
+                overflow: hidden;
+        
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+        
+
+        .textarea {
+            width: 100%;
+            height: 50px;
+            resize: none;
+            border: none;
+            outline: none;
+            margin-top: 5px;
+            font-size: 1.3rem;
+            font-weight: 400;
+            color: #fff;
+            background-color: transparent;
+
+            &::placeholder {
+                color: $color-secondary;
+            }
+        }
+    }
+
+    .container_buttons {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+
+        .container_post_button {
+            width: 7rem;
+            z-index: 0;
+
+            button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: .5rem;
+                color: #fff;
+                cursor: pointer;
+                font-weight: 700;
+                border-radius: 20px;
+                font-size: 1rem;
+                width: 100%;
+                background-color: $color-twitter;
+                padding: .5rem 1rem;
+                transition: all .1s ease-in-out;
+            
+                &:hover {
+                    background-color: $color-twitter-hover;
+                }
+            
+                &:disabled {
+                    background-color: $color-twitter-hover !important;
+                    filter: brightness(0.6);
+                    cursor: not-allowed;
+                }
+            }
+        }
+    }
+
+}
