@@ -2,6 +2,7 @@ import { Providers } from '@/redux/providers'
 import type { Metadata } from 'next'
 import React from 'react'
 import '../styles/global.scss'
+export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
   title: 'Twitter/X clone',

@@ -7,7 +7,7 @@ export default async function HomePage () {
 
   return (
     <>
-      <Preloader posts={posts} />
+      <Preloader posts={posts ?? []} />
       <HomeClient />
     </>
   )
