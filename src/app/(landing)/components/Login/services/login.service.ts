@@ -1,6 +1,6 @@
 import { type LoginUserResponse } from '../models'
 
-const URL = 'http://localhost:3001/users/login'
+const URL = `${process.env.BACKEND_URL}/users/login`
 
 interface User {
   identifier: string

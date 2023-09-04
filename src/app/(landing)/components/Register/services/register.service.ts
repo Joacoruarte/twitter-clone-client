@@ -1,6 +1,6 @@
 import { type NewUser } from '../models'
 
-const URL = 'http://localhost:3001/users/register'
+const URL = `${process.env.BACKEND_URL}/users/register`
 
 const registerUser = async (user: NewUser) => {
   try {

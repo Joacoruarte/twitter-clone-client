@@ -1,6 +1,6 @@
 import { getCookie } from '@/utils'
 
-const URL = 'http://localhost:3001/tweets'
+const URL = `${process.env.BACKEND_URL}/tweets`
 
 export const createPost = async ({
   userId,

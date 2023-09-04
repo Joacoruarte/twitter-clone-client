@@ -11,7 +11,7 @@ import {
 export const postsApi = createApi({
   reducerPath: 'postsApi',
   baseQuery: fetchBaseQuery({
-    baseUrl: 'http://localhost:3001/',
+    baseUrl: `${process.env.BACKEND_URL}/`,
     headers: {
       'Content-Type': 'application/json',
       Authorization: `Bearer ${getCookie('set-cookie')}`

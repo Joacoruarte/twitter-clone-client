@@ -8,7 +8,7 @@ interface Props {
   user: User
 }
 
-const URL = 'http://localhost:3001/users/checks'
+const URL = `${process.env.BACKEND_URL}/users/checks`
 
 const identifyUser = async ({ user }: Props): Promise<IdentifyUserResponse> => {
   const { identifier } = user

@@ -2,7 +2,7 @@ import { type Post } from '@/models'
 import { getCookie } from '@/utils'
 import { cookies } from 'next/headers'
 
-const URL = 'http://localhost:3001/tweets'
+const URL = `${process.env.BACKEND_URL}/tweets`
 
 interface GetPostsProps {
   limit?: number

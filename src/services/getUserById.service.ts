@@ -1,7 +1,7 @@
 import { type User } from '@/models'
 import { getCookie } from '@/utils'
 import { cookies } from 'next/headers'
-const URL = 'http://localhost:3001/users'
+const URL = `${process.env.BACKEND_URL}/users`
 
 export const getUserById = async (id: string): Promise<User> => {
   try {
