@@ -1,10 +1,10 @@
-import s from './index.module.scss';
-import ConnectWithProvider from '@/app/(landing)/components/ConnectWithProvider';
-import { FcGoogle } from 'react-icons/fc';
-import { AiFillApple } from 'react-icons/ai';
-import OrOption from '@/app/(landing)/components/OrOption';
+import s from './index.module.scss'
+import ConnectWithProvider from '@/app/(landing)/components/ConnectWithProvider'
+import { FcGoogle } from 'react-icons/fc'
+import { AiFillApple } from 'react-icons/ai'
+import OrOption from '@/app/(landing)/components/OrOption'
 
-export default function IdentifyUser() {
+export default function IdentifyUser () {
   return (
     <>
       <div className={s.login_form__providers}>
@@ -21,5 +21,5 @@ export default function IdentifyUser() {
       </div>
       <OrOption />
     </>
-  );
+  )
 }

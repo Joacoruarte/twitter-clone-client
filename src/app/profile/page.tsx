@@ -1,7 +1,7 @@
 import { type User } from '@/models'
 import { store } from '@/redux/store'
 import { setUser } from '@/redux/features/authSlice'
-import { getUserByContext } from '../home/services/getUserByContext.service'
+import { getUserByContext } from '@/services'
 
 export default async function HomePage () {
   let currentUser: User | null = null

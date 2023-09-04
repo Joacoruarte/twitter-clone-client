@@ -11,7 +11,9 @@ export const createPost = async ({
 }) => {
   try {
     const token = getCookie('set-cookie')
+
     if (token === null || token === undefined) throw new Error('No token')
+
     const config = {
       method: 'POST',
       headers: {
