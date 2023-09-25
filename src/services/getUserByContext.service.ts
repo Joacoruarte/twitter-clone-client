@@ -21,9 +21,9 @@ export const getUserByContext = async (): Promise<User> => {
 
     let token: string | undefined | null
     if (!isWindowExist) {
-      token = await getCookieData('set-cookie')
+      token = await getCookieData('session_cookie')
     } else {
-      token = getCookie('set-cookie')
+      token = getCookie('session_cookie')
     }
 
     if (token === null || token === undefined) throw new Error('No token')

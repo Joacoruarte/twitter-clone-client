@@ -10,7 +10,7 @@ export const createPost = async ({
   content: string
 }) => {
   try {
-    const token = getCookie('set-cookie')
+    const token = getCookie('session_cookie')
 
     if (token === null || token === undefined) throw new Error('No token')
 

@@ -15,9 +15,9 @@ const getPosts = async ({ limit = 20, offset = 0 }: GetPostsProps): Promise<Post
 
     let token: string | undefined | null
     if (!isWindowExist) {
-      token = cookies().get('set-cookie')?.value
+      token = cookies().get('session_cookie')?.value
     } else {
-      token = getCookie('set-cookie')
+      token = getCookie('session_cookie')
     }
 
     if (token === null || token === undefined) throw new Error('No token')

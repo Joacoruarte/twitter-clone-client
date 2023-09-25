@@ -27,6 +27,7 @@ export const postSlice = createSlice({
 export const setPostsAsync = (posts: Post[]) => async (dispatch: any) => dispatch(setPosts(posts))
 export const addNewPostAsync = (post: Post) => async (dispatch: any) => dispatch(addNewPost(post))
 export const setMorePostsAsync = (posts: Post[]) => async (dispatch: any) => dispatch(setMorePosts(posts))
+
 export const { setPosts, addNewPost, setMorePosts, cleanPosts } = postSlice.actions
 
 export default postSlice.reducer

@@ -14,7 +14,7 @@ export const postsApi = createApi({
     baseUrl: `${process.env.BACKEND_URL}/`,
     headers: {
       'Content-Type': 'application/json',
-      Authorization: `Bearer ${getCookie('set-cookie')}`
+      Authorization: `Bearer ${getCookie('session_cookie')}`
     }
   }),
   endpoints: (builder) => ({

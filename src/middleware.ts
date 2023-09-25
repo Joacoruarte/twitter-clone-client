@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 
 export function middleware (request: NextRequest) {
-  const session = request.cookies.get('set-cookie')?.value
+  const session = request.cookies.get('session_cookie')?.value
   const { pathname } = request.nextUrl
 
   // Redirect to login page if session is not set

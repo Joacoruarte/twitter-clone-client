@@ -5,7 +5,7 @@ export const useLogout = () => {
   const router = useRouter()
 
   const handleSignOut = () => {
-    deleteCookie('set-cookie')
+    deleteCookie('session_cookie')
     router.push('/')
   }
 
