@@ -42,7 +42,7 @@ export default function LoginModal () {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    const { message } = await loginUser({ identifier: user.identifier, password })
+    const message = await loginUser({ identifier: user.identifier, password })
 
     if (message === 'You are logged in') {
       router.push('/home')

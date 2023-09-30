@@ -27,11 +27,12 @@ export async function POST (request: Request) {
 
   const expirationDateString = expirationDate.toUTCString()
 
-  return Response.json(await requestBackend.json(), {
+  const data = await requestBackend.json()
+
+  return new Response(data.message, {
     status: 200,
     headers: {
       'Set-Cookie': `session_cookie=${cookie}; Path=/; expires=${expirationDateString};`
-
     }
   })
 }

@@ -1,4 +1,4 @@
-import { type LoginUserResponse } from '../models'
+// import { type LoginUserResponse } from '../models'
 
 const URL = 'http://localhost:3000/api/login'
 
@@ -7,8 +7,8 @@ interface User {
   password: string
 }
 
-const loginUser = async ({ identifier, password }: User): Promise<LoginUserResponse> => {
-  if (identifier === '' || password === '') return { message: 'Por favor, ingrese todos los datos' }
+const loginUser = async ({ identifier, password }: User): Promise<string> => {
+  if (identifier === '' || password === '') return 'Por favor, ingrese todos los datos'
 
   try {
     const config = {
@@ -21,10 +21,10 @@ const loginUser = async ({ identifier, password }: User): Promise<LoginUserRespo
     }
     const res = await fetch(URL, config)
 
-    return await res.json()
+    return await res.text()
   } catch (error) {
     console.log('Error checking user', error)
-    return { message: 'Hubo un error al iniciar sesión' }
+    return 'Hubo un error al iniciar sesión'
   }
 }
 
